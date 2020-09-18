@@ -4,7 +4,6 @@
     <title>FloriAndFriends</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 
@@ -12,14 +11,14 @@
   </head>
 
   <body>
-
+    <%= render 'shared/flashes' %>
+    <% unless current_page?(new_user_session_path)%>
     <div class="homepage-background" style='background-image: url("<%= cl_image_path('smt9jgb9djj9xdcuvx1t', :width=>"100px") %>");'>
     </div>
-    <%= render 'shared/flashes' %>
     <%= render 'shared/title-logo' %>
     <%= render 'shared/navbar' %>
+    <% end %>
     <%= yield %>
     <%= render 'shared/footer' %>
-
   </body>
 </html>
