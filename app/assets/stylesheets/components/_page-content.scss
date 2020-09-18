@@ -1,0 +1,29 @@
+.content-background{
+  background-color: rgba(255, 255, 255, 0.55);
+}
+
+.content {
+  margin: auto;
+  width: 900px;
+  padding: 20px 0px 20px 0px;
+  margin-top: 15px;
+}
+
+.content .title {
+  color: black;
+  font-size: 40px;
+  border-top: 4px solid black;
+  border-bottom: 4px solid black;
+  padding: 5px 0px 5px 0px;
+  margin: 10px 0px 0px 0px;
+}
+
+.content .feature {
+  border-bottom: 4px solid black;
+  padding: 30px 0px 30px 0px;
+}
+
+.content .feature .sub-title {
+  margin: 20px 0px 10px 15px;
+  font-weight: bold;
+}

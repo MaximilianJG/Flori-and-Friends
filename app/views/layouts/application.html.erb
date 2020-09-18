@@ -12,9 +12,14 @@
   </head>
 
   <body>
-    <%= render 'shared/navbar' %>
-    <%= render 'shared/flashes' %>
 
+    <div class="homepage-background" style='background-image: url("<%= cl_image_path('smt9jgb9djj9xdcuvx1t', :width=>"100px") %>");'>
+    </div>
+    <%= render 'shared/flashes' %>
+    <%= render 'shared/title-logo' %>
+    <%= render 'shared/navbar' %>
     <%= yield %>
+    <%= render 'shared/footer' %>
+
   </body>
 </html>
