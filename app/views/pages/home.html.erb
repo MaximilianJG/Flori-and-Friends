@@ -1,19 +1,56 @@
-<div class="homepage">
+<div class="homepage justify-content-center">
 
+  <div>
+    <h1 class="title text-center">Flori and Friends e.V</h1>
+  </div>
 
-<div class="content-background">
-  <div class="content">
-    <h1 class="title">Gemeinsam für ehemalig Rumänische Streuner</h1>
+  <div class="content-background">
+    <div class="homepage-content d-flex justify-content-between">
 
-    <div class="d-flex feature">
-      <%= cl_image_tag 'smt9jgb9djj9xdcuvx1t', width: "300px", class: "image" %>
-      <h3 class="sub-title">Hund des Monats</h3>
+      <div class="row w-100">
+
+        <div class="col-6">
+          <h2>Hund des Monats</h2>
+          <div class="d-flex mt-3">
+            <div>
+              <%= cl_image_tag "DSC_3319-267x400_o7y96k", width: "230px", height: "230px", class: "hund-des-monats-bild" %>
+            </div>
+            <div class="feature-text-div text-left">
+              <div class="feature-title">
+                <p class="text"><strong>Bruno</strong></p>
+              </div>
+              <div class="feature-description">
+                <p class="text"><strong>Rasse:</strong> Mischling</p>
+                <p class="text"><strong>Alter:</strong> ca. 8 Jahre</p>
+                <p class="text"><strong>Geschlecht:</strong> Rüde</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      <div class="col-6">
+        <h2>Unsere aktuellen Projekte</h2>
+        <div class="d-flex mt-3">
+          <div>
+            <%= cl_image_tag "csm_Streuner_2_ce802fd290-1_k2yrjq", width: "230px", height: "230px", class: "hund-des-monats-bild" %>
+          </div>
+          <div class="feature-text-div">
+            <div class="feature-title">
+              <p class="text"><strong>Schelterbau Rumänien</strong></p>
+            </div>
+            <div class="feature-description">
+              <p class="text"><strong>Baubeginn:</strong></p>
+              <p>oder Text beschreibung?</p>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
     </div>
 
-    <div class="d-flex feature">
-      <%= cl_image_tag 'smt9jgb9djj9xdcuvx1t', width: "300px", class: "image" %>
+
     </div>
   </div>
-</div>
 
 </div>

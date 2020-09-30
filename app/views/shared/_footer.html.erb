@@ -1,7 +1,13 @@
-<div class="footer d-flex">
+<div class="footer d-flex justify-content-center">
   <%= link_to "Impressum", "#", class: "text"  %>
   <%= link_to "Datenschutz", "#", class: "text"  %>
   <%= link_to "Sitemap", "#", class: "text"  %>
+
+  <% if user_signed_in? %>
+    <%= link_to "Abmelden", destroy_user_session_path, method: :delete, class: "text" %>
+  <% else %>
+    <%= link_to "Anmelden", new_user_session_path, class: "text"  %>
+  <% end %>
+
 </div>
 
-<%= link_to "Anmelden", new_user_session_path  %>

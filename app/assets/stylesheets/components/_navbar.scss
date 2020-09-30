@@ -1,20 +1,41 @@
-.navbar {
+.flori-navbar {
   background-color: rgba(255, 255, 255, 0.85);
-  margin: auto;
-  width: 900px;
-  border-radius: 10px;
+  width: 100%;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.navbar .link {
-  font-size: 17px;
-  margin: 15px;
+.div-links {
+  width: 80%;
+}
+
+.flori-navbar ul {
+  list-style: none;
+  padding-inline-start: 0px;
+  line-height: 2.0;
+}
+
+.flori-navbar li {
+  display: inline !important;
+}
+
+.flori-navbar .link {
+  color:black;
+  padding-bottom: 5px;
+  font-size: 20px;
   font-family: arial;
-  color: #828282;
+  margin: 50px 10px 50px 10px;
+  color: #474747;
   border-bottom: 3px solid rgba(255, 255, 255, 0.0);
 }
 
-.navbar .link:hover {
+.flori-navbar .link:hover {
   color: black;
   text-decoration: none;
   border-bottom: 3px solid #3E3E3E;
 }
+
+.logo {
+  margin: 20px;
+  margin-right: 0px;
+}
+

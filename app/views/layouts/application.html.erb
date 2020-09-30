@@ -12,12 +12,12 @@
 
   <body>
     <%= render 'shared/flashes' %>
+
     <% unless current_page?(new_user_session_path)%>
-    <div class="homepage-background" style='background-image: url("<%= cl_image_path('smt9jgb9djj9xdcuvx1t', :width=>"100px") %>");'>
-    </div>
-    <%= render 'shared/title-logo' %>
-    <%= render 'shared/navbar' %>
+      <div class="homepage-background" style='background-image: url("<%= cl_image_path('Tierschutz_pexels_mkyz0k', :width=>"100px") %>");'></div>
+      <%= render 'shared/navbar' %>
     <% end %>
+
     <%= yield %>
     <%= render 'shared/footer' %>
   </body>
