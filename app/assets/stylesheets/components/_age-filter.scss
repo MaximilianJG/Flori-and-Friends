@@ -1,0 +1,22 @@
+.age_filter_div {
+  margin-bottom: 30px;
+}
+
+.age_filter_link {
+  color:black;
+  padding: 20px 20px 0px 20px;
+  font-size: 17px;
+  font-family: arial;
+  color: #474747;
+  border-top: 4px solid rgba(255, 255, 255, 0.0);
+}
+
+.age_filter_link:hover {
+  color: black;
+  text-decoration: none;
+  border-top: 4px solid #3E3E3E;
+}
+
+.filter_link_active {
+  border-top: 4px solid #3E3E3E;
+}

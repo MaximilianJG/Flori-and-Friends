@@ -1,2 +1,32 @@
 // Import page-specific CSS files here.
 @import "home";
+@import "rueden";
+@import "dog-show";
+
+
+
+.title {
+  margin-top: 250px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 55px;
+  color: #DBB980;
+  text-shadow: 2px 3px 20px #000000;
+}
+
+.content-title {
+  color: black;
+  font-family: arial;
+}
+
+.sub-title {
+  color: black;
+  font-family: arial;
+}
+
+.text {
+  font-family: arial;
+  color: black;
+  margin-bottom: 0px;
+}
