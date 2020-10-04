@@ -1,0 +1,83 @@
+<div class="content pt-4">
+  <div class="row">
+      <div class="d-flex">
+        <% if @dog.photos.attached? %>
+          <%= cl_image_tag @dog.photos.first.key, width: "350px", height: "350px", class: "feature-image" %>
+        <% else %>
+            <%= cl_image_tag "b08hxPY_jhyrxg", class: "feature-image" %>
+        <% end %>
+
+        <div>
+          <h1 class="ml-4 content-title"> <%= @dog.name %></h1>
+          <div class="row ml-4 mb-3 dog-show-info">
+            <div class="col-6 pl-0">
+              <p class="text"><strong>Rasse:</strong> <%= @dog.race %></p>
+              <p class="text"><strong>Alter:</strong> <%= age(@dog.birthdate) %></p>
+              <p class="text"><strong>Größe:</strong> Platzhalter</p>
+              <p class="text"><strong>Geschlecht:</strong> <%= @dog.gender %></p>
+              <p class="text"><strong>Herkunftsland:</strong> Platzhalter</p>
+              <p class="text"><strong>Bei uns ab/seit:</strong> Platzhalter</p>
+            </div>
+            <div class="col-6">
+              <p class="text"><strong>Geimpft:</strong> Platzhalter</p>
+              <p class="text"><strong>Gechipt:</strong> Platzhalter</p>
+              <p class="text"><strong>Kastriert:</strong> Platzhalter</p>
+              <p class="text"><strong>Befund:</strong> Platzhalter Platzhalter Platzhalter Platzhalter Platzhalter   </p>
+              <p class="text"><strong>Behandlung:</strong> Platzhalter Platzhalter Platzhalter Platzhalter </p>
+            </div>
+          </div>
+          <div class="dog-show-description">
+            <p class="ml-4 text">Max heißt dieser selbstbewusste kleine Rüde. Er lebt bei uns unkompliziert mit einem anderen Rüden zusammen, ist stubenrein und kann wohl auch gut mal eine Zeit alleine bleiben. Max ist sehr verschmußt und freundlich, allerdings braucht er erfahrende Menschen, denn er merkt schnell wen er in der Tasche hat und wo er seinen kleinen Dickkopf durchsetzen kann. Ein bisschen Führung und anleitung braucht er. </p>
+          </div>
+        </div>
+      </div>
+
+        <div class="row w-100 mt-4">
+          <div class="col-9">
+            <% if @dog.photos.attached? %>
+              <% @dog.photos.each do |photo| %>
+                <%= cl_image_tag photo.key, width: "200px", height: "200px", class: "feature-image picture-grid" %>
+              <% end %>
+            <% else %>
+                <%= cl_image_tag "b08hxPY_jhyrxg", class: "feature-image" %>
+            <% end %>
+
+          </div>
+          <div class="col-3 card">
+
+            <%= form_for(@dog) do |f| %>
+  <% if @dog.errors.any? %>
+    <div id="error_explanation">
+      <h3><%= pluralize(@dog.errors.count, "error") %> prohibited this contact from being saved:</h2>
+
+      <ul>
+      <% @dog.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :race %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_area :name %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Send"%>
+  </div>
+<% end %>
+          </div>
+
+        </div>
+
+  </div>
+
+</div>

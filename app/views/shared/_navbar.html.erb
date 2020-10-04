@@ -3,12 +3,14 @@
 <div class="flori-navbar d-flex align-items-center">
 
   <div>
-    <%= cl_image_tag "Schriftzug_Farbe_cbruf3", width: "300px", class: "logo" %>
+    <%= link_to root_path do  %>
+      <%= cl_image_tag "Schriftzug_Farbe_cbruf3", width: "300px", class: "logo" %>
+    <% end %>
   </div>
 
   <div class=" text-center div-links">
     <ul>
-      <li><%= link_to "Home", "#", class: "link"  %></li>
+      <li><%= link_to "Home", root_path, class: "link"  %></li>
       <li><%= link_to "Wir über Uns", "#", class: "link"  %></li>
       <li><%= link_to "Das Team", "#", class: "link"  %></li>
       <li><%= link_to "Shelterbau", "#", class: "link"  %></li>
@@ -19,10 +21,10 @@
 
 
       <li><%= link_to "Notfälle", "#", class: "link"  %></li>
-      <li><%= link_to "Rüden", "#", class: "link"  %></li>
+      <li><%= link_to "Rüden", rueden_path, class: "link"  %></li>
       <li><%= link_to "Hündinnen", "#", class: "link"  %></li>
       <li><%= link_to "Handicap Dogs", "#", class: "link"  %></li>
-      <li><%= link_to "Unsere Angshässchen", "#", class: "link"  %></li>
+      <li><%= link_to "Unsere Angsthässchen", "#", class: "link"  %></li>
       <li><%= link_to "Katzen", "#", class: "link"  %></li>
       <li><%= link_to "Glücksfellchen Zuhause", "#", class: "link"  %></li>
     </ul>
