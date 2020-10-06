@@ -56,7 +56,7 @@
 
     <div class="col-3">
       <% @user = User.where(position: "Präsidentin - Verein Rumänien / Sheltermanagerin") %>
-      <% unless @user.nil? %>
+      <% unless @user[0].nil? %>
         <% if @user[0].photo.attached? %>
           <%= cl_image_tag @user[0].photo.key, width: "350px", height: "350px", class: "feature-image" %>
         <% else %>
@@ -68,7 +68,7 @@
 
     <div class="col-3">
       <% @user = User.where(position: "Tierpfleger") %>
-      <% unless @user.nil? %>
+      <% unless @user[0].nil? %>
         <% if @user[0].photo.attached? %>
           <%= cl_image_tag @user[0].photo.key, width: "350px", height: "350px", class: "feature-image" %>
         <% else %>
@@ -80,7 +80,7 @@
 
     <div class="col-3">
       <% @user = User.where(position: "Tierpfleger") %>
-      <% unless @user.nil? %>
+      <% unless @user[1].nil? %>
         <% if @user[1].photo.attached? %>
           <%= cl_image_tag @user[1].photo.key, width: "350px", height: "350px", class: "feature-image" %>
         <% else %>
@@ -92,7 +92,7 @@
 
     <div class="col-3">
       <% @user = User.where(position: "Tierpfleger") %>
-      <% unless @user.nil? %>
+      <% unless @user[2].nil? %>
         <% if @user[2].photo.attached? %>
           <%= cl_image_tag @user[2].photo.key, width: "350px", height: "350px", class: "feature-image" %>
         <% else %>
@@ -104,7 +104,7 @@
 
     <div class="col-3">
       <% @user = User.where(position: "Tierpfleger") %>
-      <% unless @user.nil? %>
+      <% unless @user[3].nil? %>
         <% if @user[3].photo.attached? %>
           <%= cl_image_tag @user[3].photo.key, width: "350px", height: "350px", class: "feature-image" %>
         <% else %>
