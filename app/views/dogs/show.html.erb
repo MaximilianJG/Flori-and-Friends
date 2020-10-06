@@ -43,37 +43,9 @@
             <% end %>
 
           </div>
-          <div class="col-3 card">
-
-            <%= form_for(@dog) do |f| %>
-  <% if @dog.errors.any? %>
-    <div id="error_explanation">
-      <h3><%= pluralize(@dog.errors.count, "error") %> prohibited this contact from being saved:</h2>
-
-      <ul>
-      <% @dog.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :race %>
-  </div>
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_area :name %>
-  </div>
-  <div class="actions">
-    <%= f.submit "Send"%>
-  </div>
-<% end %>
+          <div class="col-3 p-3 contact-form-card">
+            <% @contact = Contact.new %>
+            <%= render 'shared/contact_form' %>
           </div>
 
         </div>
