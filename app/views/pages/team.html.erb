@@ -1,0 +1,106 @@
+<div class="content">
+  <h1 class="pt-3">Team in Deutschland</h1>
+  <div class="row">
+    <div class="col-3">
+      <% @user = User.find_by(position: "1. Vorsitzende") %>
+
+      <% if @user.photo.attached? %>
+        <%= cl_image_tag @user.photo.key, width: "350px", height: "350px", class: "feature-image" %>
+      <% else %>
+          <%= cl_image_tag "Portrait_Placeholder_ry8542", width: "200px", height: "300px", class: "feature-image" %>
+      <% end %><br>
+
+      <p class="mt-2 text"> <strong><%= @user.position %>:</strong> <%= @user.first_name %> <%= @user.last_name %> </p>
+    </div>
+    <div class="col-3">
+      <% @user = User.find_by(position: "2. Vorsitzende") %>
+
+      <% if @user.photo.attached? %>
+        <%= cl_image_tag @user.photo.key, width: "350px", height: "350px", class: "feature-image" %>
+      <% else %>
+          <%= cl_image_tag "Portrait_Placeholder_ry8542", width: "200px", height: "300px", class: "feature-image" %>
+      <% end %><br>
+
+      <p class="mt-2 text"> <strong><%= @user.position %>:</strong> <%= @user.first_name %> <%= @user.last_name %> </p>
+    </div>
+    <div class="col-3">
+      <% @user = User.find_by(position: "Kassenwart") %>
+
+      <% if @user.photo.attached? %>
+        <%= cl_image_tag @user.photo.key, width: "350px", height: "350px", class: "feature-image" %>
+      <% else %>
+          <%= cl_image_tag "Portrait_Placeholder_ry8542", width: "200px", height: "300px", class: "feature-image" %>
+      <% end %><br>
+      <p class="mt-2 text"> <strong><%= @user.position %>:</strong> <%= @user.first_name %> <%= @user.last_name %> </p>
+    </div>
+    <div class="col-3">
+      <% @user = User.find_by(position: "Schriftführer") %>
+
+      <% if @user.photo.attached? %>
+        <%= cl_image_tag @user.photo.key, width: "350px", height: "350px", class: "feature-image" %>
+      <% else %>
+          <%= cl_image_tag "Portrait_Placeholder_ry8542", width: "200px", height: "300px", class: "feature-image" %>
+      <% end %><br>
+      <p class="mt-2 text"> <strong><%= @user.position %>:</strong> <%= @user.first_name %> <%= @user.last_name %> </p>
+    </div>
+  </div>
+
+<h1 class="pt-3">Team in Romänien</h1>
+  <div class="row">
+    <div class="col-3">
+      <% @user = User.where(position: "Präsidentin - Verein Rumänien / Sheltermanagerin") %>
+
+      <% if @user[0].photo.attached? %>
+        <%= cl_image_tag @user[0].photo.key, width: "350px", height: "350px", class: "feature-image" %>
+      <% else %>
+          <%= cl_image_tag "Portrait_Placeholder_ry8542", width: "200px", height: "300px", class: "feature-image" %>
+      <% end %><br>
+
+      <p class="mt-2 text"> <strong><%= @user[0].position %>:</strong> <%= @user[0].first_name %> <%= @user[0].last_name %> </p>
+    </div>
+    <div class="col-3">
+      <% @user = User.where(position: "Tierpfleger") %>
+
+      <% if @user[0].photo.attached? %>
+        <%= cl_image_tag @user[0].photo.key, width: "350px", height: "350px", class: "feature-image" %>
+      <% else %>
+          <%= cl_image_tag "Portrait_Placeholder_ry8542", width: "200px", height: "300px", class: "feature-image" %>
+      <% end %><br>
+
+      <p class="mt-2 text"> <strong><%= @user[0].position %>:</strong> <%= @user[0].first_name %> <%= @user[0].last_name %> </p>
+    </div>
+    <div class="col-3">
+      <% @user = User.where(position: "Tierpfleger") %>
+
+      <% if @user[1].photo.attached? %>
+        <%= cl_image_tag @user[1].photo.key, width: "350px", height: "350px", class: "feature-image" %>
+      <% else %>
+          <%= cl_image_tag "Portrait_Placeholder_ry8542", width: "200px", height: "300px", class: "feature-image" %>
+      <% end %><br>
+
+      <p class="mt-2 text"> <strong><%= @user[1].position %>:</strong> <%= @user[1].first_name %> <%= @user[1].last_name %> </p>
+    </div>
+    <div class="col-3">
+      <% @user = User.where(position: "Tierpfleger") %>
+
+      <% if @user[2].photo.attached? %>
+        <%= cl_image_tag @user[2].photo.key, width: "350px", height: "350px", class: "feature-image" %>
+      <% else %>
+          <%= cl_image_tag "Portrait_Placeholder_ry8542", width: "200px", height: "300px", class: "feature-image" %>
+      <% end %><br>
+
+      <p class="mt-2 text"> <strong><%= @user[2].position %>:</strong> <%= @user[2].first_name %> <%= @user[2].last_name %> </p>
+    </div>
+    <div class="col-3">
+      <% @user = User.where(position: "Tierpfleger") %>
+
+      <% if @user[3].photo.attached? %>
+        <%= cl_image_tag @user[3].photo.key, width: "350px", height: "350px", class: "feature-image" %>
+      <% else %>
+          <%= cl_image_tag "Portrait_Placeholder_ry8542", width: "200px", height: "300px", class: "feature-image" %>
+      <% end %><br>
+
+      <p class="mt-2 text"> <strong><%= @user[3].position %>:</strong> <%= @user[3].first_name %> <%= @user[3].last_name %> </p>
+    </div>
+  </div>
+</div>

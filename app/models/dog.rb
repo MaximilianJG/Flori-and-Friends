@@ -1,5 +1,6 @@
 class Dog < ApplicationRecord
   has_many_attached :photos
+  has_many :contacts
 
   validates :name, presence: true
   validates :gender, presence: true, inclusion: { in: ["M", "F"] }
