@@ -33,5 +33,8 @@ Rails.application.routes.draw do
   get "patenschaft", to: "pages#patenschaft", as: "patenschaft"
   get "foerdermitgliedschaft", to: "pages#foerdermitgliedschaft", as: "foerdermitgliedschaft"
 
+  # Shelter Posts
+  get "schelterbau", to: "shelter_posts#index", as: "shelter_posts"
+
 
 end
