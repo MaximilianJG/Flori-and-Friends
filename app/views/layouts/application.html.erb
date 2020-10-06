@@ -21,17 +21,12 @@
     <div class="justify-content-center">
       <div>
         <h1 class="title text-center">Flori and Friends e.V</h1>
+      </div>
 
-<!--         <% if user_signed_in? && current_user.admin == true %>
-          <%= link_to "Admin", rails_admin_path, class: "btn btn-primary", style: "position: absolute; left: 670px; "  %>
-        <% end %> -->
-
+      <div class="content-background">
+        <%= yield %>
+      </div>
     </div>
-
-    <div class="content-background">
-      <%= yield %>
-    </div>
-  </div>
 
     <%= render 'shared/footer' %>
   </body>

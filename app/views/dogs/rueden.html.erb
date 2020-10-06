@@ -1,33 +1,9 @@
 <div class="content">
-
   <div class="d-flex justify-content-center age_filter_div">
     <%= link_to "6 Monate bis 1 Jahr", rueden_path(query: "6-monate-bis-1-jahr"), class: "age_filter_link #{ "filter_link_active" if params[:query] == '6-monate-bis-1-jahr' }"  %>
     <%= link_to "1 Jahr bis 5 Jahre", rueden_path(query: "1-jahr-bis-5-jahre"), class: "age_filter_link #{ "filter_link_active" if params[:query] == '1-jahr-bis-5-jahre' }"  %>
     <%= link_to "6 Jahre bis 8 Jahre", rueden_path(query: "5-jahre-bis-8-jahre"), class: "age_filter_link #{ "filter_link_active" if params[:query] == '5-jahre-bis-8-jahre' }"  %>
     <%= link_to "ab 8 Jahre", rueden_path(query: "ab-8-jahre"), class: "age_filter_link #{ "filter_link_active" if params[:query] == 'ab-8-jahre' }"  %>
-
   </div>
-
-  <h1 class="content-title">Unsere Rüden</h1>
-
-  <% unless @dogs.nil? %>
-    <div class="row">
-      <% @dogs.each do |dog| %>
-        <div class="col-2 justify-content-center mt-3">
-          <%= link_to dog_path(dog) do  %>
-            <% if dog.photos.attached? %>
-              <%= cl_image_tag dog.photos.first.key, width: "190px", height: "190px", class: "feature-image" %>
-            <% else %>
-                <%= cl_image_tag "b08hxPY_jhyrxg", class: "feature-image" %>
-            <% end %>
-          <% end %>
-
-            <p class="text grid-dog-name mt-2"><strong> <%= dog.name %></strong> </p>
-            <p class="text">Rasse: <%= dog.race %></p>
-            <p class="text">Alter: <%= age(dog.birthdate) %> Jahre</p>
-
-        </div>
-      <% end %>
-    </div>
-  <% end %>
+  <%= render "dog_views" %>
 </div>

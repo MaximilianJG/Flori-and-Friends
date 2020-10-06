@@ -1,14 +1,11 @@
 class DogsController < ApplicationController
-
-  def index
-  end
-
   def notfaelle
     @dogs = Dog.where(category: "Notfälle")
   end
 
   def rueden
     @dogs = Dog.where(category: "Rüden")
+    @title = "Rüden"
     if params[:query].present?
       age_filter
     end
@@ -16,18 +13,34 @@ class DogsController < ApplicationController
 
   def huendinnen
     @dogs = Dog.where(category: "Hündinnen")
+    @title = "Hündinnen"
+    if params[:query].present?
+      age_filter
+    end
   end
 
   def handicap_dogs
     @dogs = Dog.where(category: "Handicap Dogs")
+    @title = "Handicap Dogs"
+    if params[:query].present?
+      age_filter
+    end
   end
 
   def unsere_angsthaesschen
     @dogs = Dog.where(category: "Unsere Angsthässchen")
+    @title = "Angsthässchen"
+    if params[:query].present?
+      age_filter
+    end
   end
 
   def gluecksfellchen_zuhause
     @dogs = Dog.where(category: "Glücksfellchen Zuhause")
+    @title = "Glücksfellchen Zuhause"
+    if params[:query].present?
+      age_filter
+    end
   end
 
   def show

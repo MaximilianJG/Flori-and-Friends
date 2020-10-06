@@ -1,0 +1,9 @@
+<div class="content">
+  <div class="d-flex justify-content-center age_filter_div">
+    <%= link_to "6 Monate bis 1 Jahr", huendinnen_path(query: "6-monate-bis-1-jahr"), class: "age_filter_link #{ "filter_link_active" if params[:query] == '6-monate-bis-1-jahr' }"  %>
+    <%= link_to "1 Jahr bis 5 Jahre", huendinnen_path(query: "1-jahr-bis-5-jahre"), class: "age_filter_link #{ "filter_link_active" if params[:query] == '1-jahr-bis-5-jahre' }"  %>
+    <%= link_to "6 Jahre bis 8 Jahre", huendinnen_path(query: "5-jahre-bis-8-jahre"), class: "age_filter_link #{ "filter_link_active" if params[:query] == '5-jahre-bis-8-jahre' }"  %>
+    <%= link_to "ab 8 Jahre", huendinnen_path(query: "ab-8-jahre"), class: "age_filter_link #{ "filter_link_active" if params[:query] == 'ab-8-jahre' }"  %>
+  </div>
+  <%= render "dog_views" %>
+</div>
