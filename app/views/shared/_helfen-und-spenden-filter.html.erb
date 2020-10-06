@@ -1,0 +1,5 @@
+  <div class="d-flex justify-content-center age_filter_div">
+    <%= link_to "Spenden", spenden_path, class: "age_filter_link #{ "filter_link_active" if current_page?(spenden_path)}"  %>
+    <%= link_to "Patenschaft", patenschaft_path, class: "age_filter_link #{ "filter_link_active" if current_page?(patenschaft_path)}"  %>
+    <%= link_to "Fördermitgliedschaft", foerdermitgliedschaft_path, class: "age_filter_link #{ "filter_link_active" if current_page?(foerdermitgliedschaft_path)}"  %>
+  </div>

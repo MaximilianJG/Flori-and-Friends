@@ -10,40 +10,23 @@
 
   <div class=" text-center div-links">
     <ul>
-      <li><%= link_to "Home", root_path, class: "link"  %></li>
-      <li><%= link_to "Wir über Uns", "#", class: "link"  %></li>
-      <li><%= link_to "Das Team", team_path, class: "link"  %></li>
+      <li><%= link_to "Home", root_path, class: "link #{ "link-active" if current_page?(root_path) }" %></li>
+      <li><%= link_to "Wir über Uns", "#", class: "link" %> </li>
+      <li><%= link_to "Das Team", team_path, class: "link #{ "link-active" if current_page?(team_path) }"  %></li>
       <li><%= link_to "Shelterbau", "#", class: "link"  %></li>
-      <li><%= link_to "Helfen und Spenden", "#", class: "link"  %></li>
-      <li><%= link_to "Mitglied werden", mitglied_werden_path, class: "link"  %></li>
-      <li><%= link_to "Kontakt", new_contact_path, class: "link"  %></li>
-      <li><%= link_to "Newsletter", "#", class: "link"  %></li>
+      <li><%= link_to "Helfen und Spenden", helfen_und_spenden_path, class: "link #{ "link-active" if current_page?(helfen_und_spenden_path) || current_page?(spenden_path) || current_page?(patenschaft_path) || current_page?(foerdermitgliedschaft_path) } "  %> </li>
+      <li><%= link_to "Mitglied werden", mitglied_werden_path, class: "link #{ "link-active" if current_page?(mitglied_werden_path) }"  %></li>
+      <li><%= link_to "Kontakt", new_contact_path, class: "link #{ "link-active" if current_page?(new_contact_path) }"  %></li>
+      <li><%= link_to "Gedenken", "#", class: "link"  %></li>
 
-
-      <li><%= link_to "Notfälle", notfaelle_path, class: "link"  %></li>
-      <li><%= link_to "Rüden", rueden_path, class: "link"  %></li>
-      <li><%= link_to "Hündinnen", huendinnen_path, class: "link"  %></li>
-      <li><%= link_to "Handicap Dogs", handicap_dogs_path, class: "link"  %></li>
-      <li><%= link_to "Unsere Angsthässchen", unsere_angsthaesschen_path, class: "link"  %></li>
+      <li><%= link_to "Notfälle", notfaelle_path, class: "link #{ "link-active" if current_page?(notfaelle_path) }"  %></li>
+      <li><%= link_to "Rüden", rueden_path, class: "link #{ "link-active" if current_page?(rueden_path) }"  %></li>
+      <li><%= link_to "Hündinnen", huendinnen_path, class: "link #{ "link-active" if current_page?(huendinnen_path) }"  %></li>
+      <li><%= link_to "Handicap Dogs", handicap_dogs_path, class: "link #{ "link-active" if current_page?(handicap_dogs_path) }"  %></li>
+      <li><%= link_to "Unsere Angsthässchen", unsere_angsthaesschen_path, class: "link #{ "link-active" if current_page?(unsere_angsthaesschen_path) }"  %></li>
       <li><%= link_to "Katzen", "#", class: "link"  %></li>
-      <li><%= link_to "Glücksfellchen Zuhause", gluecksfellchen_zuhause_path, class: "link"  %></li>
+      <li><%= link_to "Glücksfellchen Zuhause", gluecksfellchen_zuhause_path, class: "link #{ "link-active" if current_page?(gluecksfellchen_zuhause_path) }"  %></li>
     </ul>
 
-<!--     <%= link_to "Vermittlungsablauf", "#", class: "link"  %>
-    <%= link_to "Patenschaften", "#", class: "link"  %>
-    <%= link_to "Hunde auf PS in Deutschland", "#", class: "link"  %>
-    <%= link_to "Welpen", "#", class: "link"  %>
-    <%= link_to "Last Home Dogs", "#", class: "link"  %>
-    <%= link_to "Not-Fellis", "#", class: "link"  %>
-    <%= link_to "Fellis grüßen ihre Paten", "#", class: "link"  %>
-    <%= link_to "Wir bauen einen Shelter", "#", class: "link"  %>
-    <%= link_to "Bildergallerie", "#", class: "link"  %>
-    <%= link_to "Videos", "#", class: "link"  %>
-    <%= link_to "Happy Soulis", "#", class: "link"  %>
-    <%= link_to "Freunde", "#", class: "link"  %>
-    <%= link_to "Satzung", "#", class: "link"  %>
-    <%= link_to "Datenschutzerklärung", "#", class: "link"  %>
-    <%= link_to "Haftungsausschluss", "#", class: "link"  %>
-    <%= link_to "Impressung", "#", class: "link"  %> -->
   </div>
 </div>

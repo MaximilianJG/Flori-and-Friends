@@ -1,6 +1,10 @@
 class DogsController < ApplicationController
   def notfaelle
     @dogs = Dog.where(category: "Notfälle")
+    @title = "Notfälle"
+    if params[:query].present?
+      age_filter
+    end
   end
 
   def rueden

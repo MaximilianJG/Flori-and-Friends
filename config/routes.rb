@@ -25,4 +25,13 @@ Rails.application.routes.draw do
   # Pages Controller
   get "mitglied_werden", to: "pages#mitglied_werden", as: "mitglied_werden"
   get "team", to: "pages#team", as: "team"
+  get "impressum", to: "pages#impressum", as: "impressum"
+  get "datenschutz", to: "pages#datenschutz", as: "datenschutz"
+
+  get "helfen_und_spenden", to: "pages#helfen_und_spenden", as: "helfen_und_spenden"
+  get "spenden", to: "pages#spenden", as: "spenden"
+  get "patenschaft", to: "pages#patenschaft", as: "patenschaft"
+  get "foerdermitgliedschaft", to: "pages#foerdermitgliedschaft", as: "foerdermitgliedschaft"
+
+
 end
