@@ -10,6 +10,11 @@ Rails.application.routes.draw do
 
   get "dogs/nofaelle", to: "dogs#notfaelle", as: "notfaelle"
   get "dogs/rueden", to: "dogs#rueden", as: "rueden"
+  get "dogs/huendinnen", to: "dogs#huendinnen", as: "huendinnen"
+  get "dogs/handicap_dogs", to: "dogs#handicap_dogs", as: "handicap_dogs"
+  get "dogs/unsere_angsthaesschen", to: "dogs#unsere_angsthaesschen", as: "unsere_angsthaesschen"
+  get "dogs/gluecksfellchen_zuhause", to: "dogs#gluecksfellchen_zuhause", as: "gluecksfellchen_zuhause"
+
 
   # Contacts Controller
   get "contact", to: "contacts#new", as: "new_contact"
