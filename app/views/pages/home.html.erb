@@ -1,47 +1,49 @@
     <div class="homepage-content d-flex justify-content-between">
-
       <div class="row w-100">
 
+        <% unless @dog.nil? %>
         <div class="col-6">
           <h2>Hund des Monats</h2>
           <div class="d-flex mt-3">
-            <div>
-              <%= cl_image_tag "DSC_3319-267x400_o7y96k", width: "230px", height: "230px", class: "feature-image" %>
-            </div>
+            <%= link_to dog_path(@dog) do  %>
+              <% if @dog.photos.attached? %>
+                <%= cl_image_tag @dog.photos.first.key, width: "230px", height: "230px", class: "feature-image" %>
+              <% else %>
+                  <%= cl_image_tag "b08hxPY_jhyrxg", class: "feature-image" %>
+              <% end %>
+            <% end %>
             <div class="feature-text-div text-left">
               <div class="feature-title">
-                <p class="text"><strong>Bruno</strong></p>
+                <p class="text"><strong><%= @dog.name %></strong></p>
               </div>
               <div class="feature-description">
-                <p class="text">Rasse: Mischling</p>
-                <p class="text">Alter: ca. 8 Jahre</p>
-                <p class="text">Geschlecht: Rüde</p>
+                <p class="text">Rasse: <%= @dog.race %></p>
+                <p class="text">Alter: ca. <%= age(@dog.birthdate) %></p>
+                <p class="text">Geschlecht: <%= @dog.gender %></p>
               </div>
             </div>
           </div>
         </div>
+        <% end %>
 
-      <div class="col-6">
-        <h2>Unsere aktuellen Projekte</h2>
-        <div class="d-flex mt-3">
-          <div>
-            <%= cl_image_tag "csm_Streuner_2_ce802fd290-1_k2yrjq", width: "230px", height: "230px", class: "feature-image" %>
-          </div>
-          <div class="feature-text-div">
-            <div class="feature-title">
-              <p class="text"><strong>Schelterbau Rumänien</strong></p>
+        <div class="col-6">
+          <h2>Unsere aktuellen Projekte</h2>
+          <div class="d-flex mt-3">
+            <div>
+              <%= cl_image_tag "csm_Streuner_2_ce802fd290-1_k2yrjq", width: "230px", height: "230px", class: "feature-image" %>
             </div>
-            <div class="feature-description">
-              <p class="text">Baubeginn:</p>
-              <p>oder Text beschreibung?</p>
+            <div class="feature-text-div">
+              <div class="feature-title">
+                <p class="text"><strong>Schelterbau Rumänien</strong></p>
+              </div>
+              <div class="feature-description">
+                <p class="text">Baubeginn:</p>
+                <p>oder Text beschreibung?</p>
+              </div>
+
             </div>
 
           </div>
-
         </div>
       </div>
     </div>
-
-
-    </div>
-
