@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   get "dogs/handicap_dogs", to: "dogs#handicap_dogs", as: "handicap_dogs"
   get "dogs/unsere_angsthaesschen", to: "dogs#unsere_angsthaesschen", as: "unsere_angsthaesschen"
   get "dogs/gluecksfellchen_zuhause", to: "dogs#gluecksfellchen_zuhause", as: "gluecksfellchen_zuhause"
+  get "dogs/gedenken", to: "dogs#gedenken", as: "gedenken"
 
 
   # Contacts Controller

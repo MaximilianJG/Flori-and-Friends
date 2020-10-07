@@ -5,13 +5,17 @@ class ContactsController < ApplicationController
 
   def create
     @contact = Contact.new(strong_contact_params)
-    @dog = Dog.find(params[:dog_id])
-    @contact.dog = @dog
+
+    unless params[:dog_id].nil?
+      @dog = Dog.find(params[:dog_id])
+      @contact.dog = @dog
+    end
+
     if @contact.save
       ContactMailer.general_message(@contact).deliver_now
       redirect_back(fallback_location: root_path)
     else
-      render 'dogs/show'
+      redirect_back(fallback_location: root_path)
     end
   end
 

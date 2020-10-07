@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_07_121713) do
+ActiveRecord::Schema.define(version: 2020_10_07_132311) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -40,10 +40,10 @@ ActiveRecord::Schema.define(version: 2020_10_07_121713) do
     t.string "name"
     t.string "email"
     t.string "message"
-    t.bigint "dog_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "phone_number"
+    t.bigint "dog_id"
     t.index ["dog_id"], name: "index_contacts_on_dog_id"
   end
 
@@ -57,6 +57,7 @@ ActiveRecord::Schema.define(version: 2020_10_07_121713) do
     t.datetime "updated_at", precision: 6, null: false
     t.text "description"
     t.boolean "dog_of_the_month", default: false
+    t.boolean "dead", default: false
   end
 
   create_table "shelter_posts", force: :cascade do |t|

@@ -1,5 +1,5 @@
 class Contact < ApplicationRecord
-  belongs_to :dog
+  belongs_to :dog, optional: true
 
   validates :email,
     :presence => :true,

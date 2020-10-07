@@ -4,15 +4,16 @@
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
   </head>
   <body>
-    <h1> Kontaktanfrage zu <%= @contact.dog.name %> </h1>
+    <% if @contact.dog.nil? %>
+      <h1>Kontaktanfrage</h1>
+    <% else %>
+      <h1> Kontaktanfrage zu <%= @contact.dog.name %> </h1>
+    <% end %>
     <p class="mb-0"> von <%= @contact.name %> </p>
     <p> - <%= @contact.email %> </p>
     <% if @contact.phone_number.present? %>
       <p> - <%= @contact.phone_number %> </p>
     <% end %>
-
-
-
     <p>
       <%= @contact.message %>
     </p>

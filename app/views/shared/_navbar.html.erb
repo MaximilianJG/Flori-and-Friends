@@ -17,7 +17,7 @@
       <li><%= link_to "Helfen und Spenden", spenden_path, class: "link #{ "link-active" if current_page?(spenden_path) || current_page?(patenschaft_path) || current_page?(foerdermitgliedschaft_path) }"%></li>
       <li><%= link_to "Mitglied werden", mitglied_werden_path, class: "link #{ "link-active" if current_page?(mitglied_werden_path) }"  %></li>
       <li><%= link_to "Kontakt", new_contact_path, class: "link #{ "link-active" if current_page?(new_contact_path) }"  %></li>
-      <li><%= link_to "Gedenken", "#", class: "link"  %></li>
+      <li><%= link_to "Gedenken", gedenken_path, class: "link"  %></li>
 
       <li><%= link_to "Notfälle", notfaelle_path, class: "link #{ "link-active" if current_page?(notfaelle_path) }"  %></li>
       <li><%= link_to "Rüden", rueden_path, class: "link #{ "link-active" if current_page?(rueden_path) }"  %></li>

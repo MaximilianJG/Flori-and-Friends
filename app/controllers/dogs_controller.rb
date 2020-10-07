@@ -51,6 +51,10 @@ class DogsController < ApplicationController
     @dog = Dog.find(params[:id])
   end
 
+  def gedenken
+    @dogs = Dog.where(dead: true)
+  end
+
   private
 
   def age(dob)
