@@ -13,10 +13,8 @@
   <body>
     <%= render 'shared/flashes' %>
 
-    <% unless current_page?(new_user_session_path)%>
       <div class="homepage-background" style='background-image: url("<%= cl_image_path('Bessy_DSC_0243_2_bickfx', :width=>"100px") %>");'></div>
       <%= render 'shared/navbar' %>
-    <% end %>
 
     <div class="justify-content-center">
       <div>
@@ -29,6 +27,5 @@
     </div>
 
     <%= render 'shared/footer' %>
-    <p class="text-right">Made by Susanne & Max Glasmacher</p>
   </body>
 </html>
