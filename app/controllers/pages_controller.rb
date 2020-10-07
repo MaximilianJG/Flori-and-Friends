@@ -2,6 +2,9 @@ class PagesController < ApplicationController
   def home
   end
 
+  def wir_ueber_uns
+  end
+
   def team
   end
 
@@ -15,9 +18,6 @@ class PagesController < ApplicationController
   end
 
   # Helfen und Spenden
-  def helfen_und_spenden
-  end
-
   def spenden
   end
 

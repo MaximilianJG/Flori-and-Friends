@@ -1,59 +1,11 @@
 <div class="content">
-<!--   <h1 class="pt-3">Team in Deutschland</h1>
+  <h1 class="pt-3">Das Team</h1>
+
+  <p>Sie haben selbst nichts, aber geben alles für das Wohl  der Tiere. In einem Land, wo die Not unserer Mitgeschöpfe groß ist,
+  sind sie seit Jahren auf der Seite dieser leidgeplagten Wesen und schenken ihnen Zuflucht, Fürsorge und Liebe – das
+  Flori & Friends Team vor Ort: Flori, Andreas, Marius, Mihaela und Viorel </p>
+
   <div class="row">
-
-    <div class="col-3">
-      <% @user = User.find_by(position: "1. Vorsitzende") %>
-      <% unless @user.nil? %>
-        <% if @user.photo.attached? %>
-          <%= cl_image_tag @user.photo.key, width: "350px", height: "350px", class: "feature-image" %>
-        <% else %>
-            <%= cl_image_tag "Portrait_Placeholder_ry8542", width: "200px", height: "300px", class: "feature-image" %>
-        <% end %><br>
-        <p class="mt-2 text"> <strong><%= @user.position %>:</strong> <%= @user.first_name %> <%= @user.last_name %> </p>
-      <% end %>
-    </div>
-
-    <div class="col-3">
-      <% @user = User.find_by(position: "2. Vorsitzende") %>
-      <% unless @user.nil? %>
-        <% if @user.photo.attached? %>
-          <%= cl_image_tag @user.photo.key, width: "350px", height: "350px", class: "feature-image" %>
-        <% else %>
-            <%= cl_image_tag "Portrait_Placeholder_ry8542", width: "200px", height: "300px", class: "feature-image" %>
-        <% end %><br>
-        <p class="mt-2 text"> <strong><%= @user.position %>:</strong> <%= @user.first_name %> <%= @user.last_name %> </p>
-      <% end %>
-    </div>
-
-    <div class="col-3">
-      <% @user = User.find_by(position: "Kassenwart") %>
-      <% unless @user.nil? %>
-        <% if @user.photo.attached? %>
-          <%= cl_image_tag @user.photo.key, width: "350px", height: "350px", class: "feature-image" %>
-        <% else %>
-            <%= cl_image_tag "Portrait_Placeholder_ry8542", width: "200px", height: "300px", class: "feature-image" %>
-        <% end %><br>
-        <p class="mt-2 text"> <strong><%= @user.position %>:</strong> <%= @user.first_name %> <%= @user.last_name %> </p>
-      <% end %>
-    </div>
-
-    <div class="col-3">
-      <% @user = User.find_by(position: "Schriftführer") %>
-      <% unless @user.nil? %>
-        <% if @user.photo.attached? %>
-          <%= cl_image_tag @user.photo.key, width: "350px", height: "350px", class: "feature-image" %>
-        <% else %>
-            <%= cl_image_tag "Portrait_Placeholder_ry8542", width: "200px", height: "300px", class: "feature-image" %>
-        <% end %><br>
-        <p class="mt-2 text"> <strong><%= @user.position %>:</strong> <%= @user.first_name %> <%= @user.last_name %> </p>
-      <% end %>
-    </div>
-  </div>
- -->
-<h1 class="pt-3">Das Team</h1>
-  <div class="row">
-
     <div class="col-3 mt-3">
       <% @user = User.where(position: "Präsidentin - Verein Rumänien / Sheltermanagerin") %>
       <% unless @user[0].nil? %>

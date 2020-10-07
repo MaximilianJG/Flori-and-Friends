@@ -11,10 +11,10 @@
   <div class=" text-center div-links">
     <ul>
       <li><%= link_to "Home", root_path, class: "link #{ "link-active" if current_page?(root_path) }" %></li>
-      <li><%= link_to "Wir über Uns", "#", class: "link" %> </li>
+      <li><%= link_to "Wir über uns", wir_ueber_uns_path, class: "link" %> </li>
       <li><%= link_to "Das Team", team_path, class: "link #{ "link-active" if current_page?(team_path) }"  %></li>
-      <li><%= link_to "Shelterbau", shelter_posts_path, class: "link"  %></li>
-      <li><%= link_to "Helfen und Spenden", helfen_und_spenden_path, class: "link #{ "link-active" if current_page?(helfen_und_spenden_path) || current_page?(spenden_path) || current_page?(patenschaft_path) || current_page?(foerdermitgliedschaft_path) } "  %> </li>
+      <li><%= link_to "Schelterbau", shelter_posts_path, class: "link"  %></li>
+      <li><%= link_to "Helfen und Spenden", spenden_path, class: "link #{ "link-active" if current_page?(spenden_path) || current_page?(patenschaft_path) || current_page?(foerdermitgliedschaft_path) }"%></li>
       <li><%= link_to "Mitglied werden", mitglied_werden_path, class: "link #{ "link-active" if current_page?(mitglied_werden_path) }"  %></li>
       <li><%= link_to "Kontakt", new_contact_path, class: "link #{ "link-active" if current_page?(new_contact_path) }"  %></li>
       <li><%= link_to "Gedenken", "#", class: "link"  %></li>
