@@ -6,5 +6,5 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  validates :position, presence: true, inclusion: { in: ["1. Vorsitzende", "2. Vorsitzende", "Kassenwart", "Schriftführer", "Präsidentin - Verein Rumänien / Sheltermanagerin", "Tierpfleger"] }
+  validates :position, presence: true, inclusion: { in: ["1. Vorsitzende", "2. Vorsitzende", "Kassenwart", "Schriftführer", "Präsidentin - Verein Rumänien / Sheltermanagerin", "Tierpfleger", "Other"] }
 end
