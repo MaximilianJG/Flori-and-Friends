@@ -3,6 +3,6 @@ class ContactMailer < ApplicationMailer
 
   def general_message(contact)
     @contact = contact
-    mail( :to => "flori.friends.animalhope@gmail.com", :subject => "Kontaktanfrage #{@contact.dog.name if !@contact.dog.nil?}")
+    mail(:to => "flori.friends.animalhope@gmail.com", :subject => "Kontaktanfrage #{@contact.dog.name if !@contact.dog.nil?}")
   end
 end
