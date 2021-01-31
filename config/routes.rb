@@ -35,7 +35,9 @@ Rails.application.routes.draw do
   get "foerdermitgliedschaft", to: "pages#foerdermitgliedschaft", as: "foerdermitgliedschaft"
 
   # Shelter Posts
-  get "schelterbau", to: "shelter_posts#index", as: "shelter_posts"
+  get "shelterbau", to: "shelter_posts#index", as: "shelter_posts"
+
+  resources :categories, only: [:show]
 
 
 end
