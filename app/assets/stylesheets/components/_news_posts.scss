@@ -1,0 +1,10 @@
+.news-post-image {
+  object-fit: cover;
+}
+
+.news-post-home-text {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 9;
+  -webkit-box-orient: vertical;
+}

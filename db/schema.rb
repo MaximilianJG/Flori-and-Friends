@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_31_114632) do
+ActiveRecord::Schema.define(version: 2021_02_06_131937) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -53,6 +53,12 @@ ActiveRecord::Schema.define(version: 2021_01_31_114632) do
     t.index ["dog_id"], name: "index_contacts_on_dog_id"
   end
 
+  create_table "dead_dogs", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "dog_categories", force: :cascade do |t|
     t.bigint "dog_id", null: false
     t.bigint "category_id", null: false
@@ -72,13 +78,22 @@ ActiveRecord::Schema.define(version: 2021_01_31_114632) do
     t.text "description"
     t.boolean "dog_of_the_month", default: false
     t.boolean "dead", default: false
+    t.string "size"
   end
 
-  create_table "shelter_posts", force: :cascade do |t|
+  create_table "lucky_dogs", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "news_posts", force: :cascade do |t|
     t.string "title"
     t.text "content"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.date "date"
+    t.boolean "featured"
   end
 
   create_table "users", force: :cascade do |t|

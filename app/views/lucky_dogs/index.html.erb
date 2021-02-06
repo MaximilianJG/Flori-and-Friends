@@ -1,20 +1,22 @@
-<div class="content pt-3">
-  <h1 class="content-title">Gedenken</h1>
+<div class="content">
+  <h1 class="content-title pt-2">Gedenken</h1>
   <% unless @dogs.nil? %>
     <div class="row">
       <% @dogs.each do |dog| %>
         <div class="col-2 justify-content-center mt-3">
           <%= link_to dog_path(dog) do  %>
-            <% if dog.photos.attached? %>
-              <%= cl_image_tag dog.photos.first.key, width: "190px", height: "190px", class: "feature-image" %>
+            <% if dog.photo.attached? %>
+              <%= cl_image_tag dog.photo.key, width: "190px", height: "190px", class: "feature-image" %>
             <% else %>
                 <%= cl_image_tag "b08hxPY_jhyrxg", class: "feature-image" %>
             <% end %>
           <% end %>
 
             <p class="text grid-dog-name mt-2"><strong> <%= dog.name %></strong> </p>
+
+
         </div>
       <% end %>
     </div>
-    <% end %>
+  <% end %>
 </div>

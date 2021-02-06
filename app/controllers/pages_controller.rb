@@ -5,6 +5,8 @@ class PagesController < ApplicationController
     #   @dog.last.update(dog_of_the_month: false)
     # end
     # @dog = Dog.where(dog_of_the_month: true)[0]
+
+    @news_post = NewsPost.where(featured: true).first
   end
 
   def wir_ueber_uns

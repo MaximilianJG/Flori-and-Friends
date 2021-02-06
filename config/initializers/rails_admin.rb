@@ -15,6 +15,12 @@ RailsAdmin.config do |config|
   end
 end
 
+  # config.model 'Dog' do
+  #     list do
+  #       exclude_fields :created_at, :updated_at
+  #     end
+  # end
+
   ## == CancanCan ==
   # config.authorize_with :cancancan
 

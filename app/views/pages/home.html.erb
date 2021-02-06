@@ -27,23 +27,23 @@
         <% end %>
 
         <div class="col-6">
-          <h2>Unser aktuelles Projekt</h2>
-          <div class="d-flex mt-3">
-            <div>
-              <%= cl_image_tag "csm_Streuner_2_ce802fd290-1_k2yrjq", width: "230px", height: "230px", class: "feature-image" %>
-            </div>
-            <div class="feature-text-div">
-              <div class="feature-title">
-                <p class="text"><strong>Schelterbau Rumänien</strong></p>
+          <% unless @news_post.nil? %>
+            <h2><%= @news_post.title %></h2>
+            <div class="d-flex mt-3">
+              <div>
+                <%= link_to news_posts_path do %>
+                <% if @news_post.photo.attached? %>
+                  <%= cl_image_tag @news_post.photo.key, width: "230", height: "230", class: "news-post-image" %>
+                <% end %>
+                <% end %>
               </div>
-              <div class="feature-description">
-                <p class="text">Baubeginn:</p>
-                <p>oder Text beschreibung?</p>
+              <div class="feature-text-div">
+                <div class="feature-description news-post-home-text">
+                  <%= simple_format(@news_post.content) %>
+                </div>
               </div>
-
             </div>
-
-          </div>
+          <% end %>
         </div>
       </div>
     </div>

@@ -13,18 +13,18 @@
       <li><%= link_to "Home", root_path, class: "link #{ "link-active" if current_page?(root_path) }" %></li>
       <li><%= link_to "Wir über uns", wir_ueber_uns_path, class: "link #{ "link-active" if current_page?(wir_ueber_uns_path) }" %> </li>
       <li><%= link_to "Das Team", team_path, class: "link #{ "link-active" if current_page?(team_path) }"  %></li>
-      <li><%= link_to "Shelterbau", shelter_posts_path, class: "link #{ "link-active" if current_page?(shelter_posts_path) }"  %></li>
+      <li><%= link_to "News", news_posts_path, class: "link #{ "link-active" if current_page?(news_posts_path) }"  %></li>
       <li><%= link_to "Helfen und Spenden", spenden_path, class: "link #{ "link-active" if current_page?(spenden_path) || current_page?(patenschaft_path) || current_page?(foerdermitgliedschaft_path) }"%></li>
       <li><%= link_to "Mitglied werden", mitglied_werden_path, class: "link #{ "link-active" if current_page?(mitglied_werden_path) }"  %></li>
       <li><%= link_to "Kontakt", new_contact_path, class: "link #{ "link-active" if current_page?(new_contact_path) }"  %></li>
-      <li><%= link_to "Gedenken", gedenken_path, class: "link"  %></li>
+      <li><%= link_to "Gedenken", dead_dogs_path, class: "link"  %></li>
 
       <li><%= link_to "Notfälle", category_path(1), class: "link #{ "link-active" if current_page?(notfaelle_path) }"  %></li>
       <li><%= link_to "Rüden", category_path(2), class: "link #{ "link-active" if current_page?(rueden_path) }"  %></li>
       <li><%= link_to "Hündinnen", category_path(3), class: "link #{ "link-active" if current_page?(huendinnen_path) }"  %></li>
       <li><%= link_to "Handicap Dogs", category_path(4), class: "link #{ "link-active" if current_page?(handicap_dogs_path) }"  %></li>
       <li><%= link_to "Katzen", "#", class: "link"  %></li>
-      <li><%= link_to "Glücksfellchen Zuhause", category_path(5), class: "link #{ "link-active" if current_page?(gluecksfellchen_zuhause_path) }"  %></li>
+      <li><%= link_to "Glücksfellchen Zuhause", lucky_dogs_path, class: "link #{ "link-active" if current_page?(gluecksfellchen_zuhause_path) }"  %></li>
     </ul>
   </div>
 </div>

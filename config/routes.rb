@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  get 'lucky_dogs/index'
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :users
   root to: 'pages#home'
@@ -14,7 +15,6 @@ Rails.application.routes.draw do
   get "dogs/handicap_dogs", to: "dogs#handicap_dogs", as: "handicap_dogs"
   get "dogs/unsere_angsthaesschen", to: "dogs#unsere_angsthaesschen", as: "unsere_angsthaesschen"
   get "dogs/gluecksfellchen_zuhause", to: "dogs#gluecksfellchen_zuhause", as: "gluecksfellchen_zuhause"
-  get "dogs/gedenken", to: "dogs#gedenken", as: "gedenken"
 
 
   # Contacts Controller
@@ -34,10 +34,15 @@ Rails.application.routes.draw do
   get "patenschaft", to: "pages#patenschaft", as: "patenschaft"
   get "foerdermitgliedschaft", to: "pages#foerdermitgliedschaft", as: "foerdermitgliedschaft"
 
-  # Shelter Posts
-  get "shelterbau", to: "shelter_posts#index", as: "shelter_posts"
+  # News Posts
+  get "news", to: "news_posts#index", as: "news_posts"
 
   resources :categories, only: [:show]
+
+  get "gedenken", to: "dead_dogs#index", as: "dead_dogs"
+  get "glücksfellchen", to: "lucky_dogs#index", as: "lucky_dogs"
+
+
 
 
 end

@@ -4,7 +4,7 @@
         <% if @dog.photos.attached? %>
           <%= cl_image_tag @dog.photos.first.key, width: "350px", height: "350px", class: "feature-image" %>
         <% else %>
-            <%= cl_image_tag "b08hxPY_jhyrxg", class: "feature-image" %>
+            <%= cl_image_tag "oaqj3leypeogevw59meqw9c2unba", width: "350px", height: "350px", class: "feature-image" %>
         <% end %>
 
         <div>
@@ -13,7 +13,7 @@
             <div class="pl-0">
               <p class="text"><strong>Rasse:</strong> <%= @dog.race %></p>
               <p class="text"><strong>Alter:</strong> <%= age(@dog.birthdate) %></p>
-              <p class="text"><strong>Größe:</strong> Platzhalter</p>
+              <p class="text"><strong>Größe:</strong> <%= @dog.size.capitalize %></p>
               <p class="text"><strong>Geschlecht:</strong> <%= @dog.gender %></p>
             </div>
           </div>
@@ -30,7 +30,7 @@
                 <%= cl_image_tag photo.key, width: "200px", height: "200px", class: "feature-image picture-grid" %>
               <% end %>
             <% else %>
-                <%= cl_image_tag "b08hxPY_jhyrxg", class: "feature-image" %>
+                <%= cl_image_tag "oaqj3leypeogevw59meqw9c2unba", width: "350px", height: "350px", class: "feature-image" %>
             <% end %>
 
           </div>
